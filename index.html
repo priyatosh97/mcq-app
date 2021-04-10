@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>MCQ App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12 text-center"><h2>MCQ APP</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-right">
+          <h4 id="timer"></h4>
+        </div>
+      </div>
+      <div class="row" id="questionBox">
+        <div class="col-12">
+          <h3 id="question"></h3>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="options"
+              type="radio"
+              id="option1-radio"
+              value="0"
+              onClick="setAnswer(0)"
+            />
+            <label id="option1" class="form-check-label" for="option1-radio">
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="options"
+              type="radio"
+              id="option2-radio"
+              value="1"
+              onClick="setAnswer(1)"
+            />
+            <label id="option2" class="form-check-label" for="option2-radio">
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="options"
+              type="radio"
+              id="option3-radio"
+              value="2"
+              onClick="setAnswer(2)"
+            />
+            <label id="option3" class="form-check-label" for="option3-radio">
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="options"
+              type="radio"
+              id="option4-radio"
+              value="3"
+              onClick="setAnswer(3)"
+            />
+            <label id="option4" class="form-check-label" for="option4-radio">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <button id="submit" class="btn btn-primary" onclick="submitAnswer()">
+            Submit
+          </button>
+        </div>
+        <div class="col-12">
+          <button
+            id="next"
+            style="display: none"
+            class="btn btn-primary"
+            onclick="nextQuestion()"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center"><h3 id="message"></h3></div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
